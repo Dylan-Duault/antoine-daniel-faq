@@ -8,7 +8,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
     <title>Antoine Daniel - FAQ</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="assets/img/logos/AntoineDanielLogo.png" />
 
     <!-- Google Tag Manager -->
     <script>
@@ -54,7 +54,7 @@
                     <div class="column"></div>
                     <div class="column is-9">
                         <div class="help-header">
-                            <img src="assets/img/logos/square-white.svg" alt="" />
+                            <img src="assets/img/logos/AntoineDanielLogo.png" alt="Antoine Daniel Logo" />
                             <h1 class="title is-4">Antoine Daniel - FAQ</h1>
                         </div>
                         <div class="help-subheader">
@@ -72,60 +72,22 @@
             <div class="columns is-vcentered">
                 <div class="column"></div>
                 <div class="column is-9">
-                    <!-- Category card -->
-                    <div class="flex-card category-card light-bordered">
-                        <div class="card-body">
-                            <a href="kit4-help-category.html">
-                                <!-- Icon -->
-                                <div class="icon">
-                                    <i class="im im-icon-Claps"></i>
-                                </div>
-                                <!-- Content -->
-                                <div class="inner-content">
-                                    <h2 class="title is-4">Question</h2>
-                                    <div class="inner-text">
-                                        Réponse
+                    @foreach($faqItems as $faqItem)   
+                        <!-- Category card -->
+                        <div class="flex-card category-card light-bordered">
+                            <div class="card-body">
+                                <a href="#">
+                                    <!-- Content -->
+                                    <div class="inner-content">
+                                        <h2 class="title is-4">{{$faqItem->question}}</h2>
+                                        <div class="inner-text">
+                                        {!! $faqItem->answer !!}
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Category card -->
-                    <div class="flex-card category-card light-bordered">
-                        <div class="card-body">
-                            <a href="kit4-help-category.html">
-                                <!-- Icon -->
-                                <div class="icon">
-                                    <i class="im im-icon-Claps"></i>
-                                </div>
-                                <!-- Content -->
-                                <div class="inner-content">
-                                    <h2 class="title is-4">Question</h2>
-                                    <div class="inner-text">
-                                        Réponse
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div><!-- Category card -->
-                    <div class="flex-card category-card light-bordered">
-                        <div class="card-body">
-                            <a href="kit4-help-category.html">
-                                <!-- Icon -->
-                                <div class="icon">
-                                    <i class="im im-icon-Claps"></i>
-                                </div>
-                                <!-- Content -->
-                                <div class="inner-content">
-                                    <h2 class="title is-4">Question</h2>
-                                    <div class="inner-text">
-                                        Réponse
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="column"></div>
             </div>
@@ -135,7 +97,7 @@
     <footer class="footer-light-medium">
         <div class="container">
             <div class="footer-copyright has-text-centered">
-            <span class="moto">Codé avec <i class="fa fa-heart color-red"></i> par Dylan Duault et PRENOM</span>
+            <span class="moto">Développé par <a href="https://dylan-duault.com" class="has-text-primary">Dylan Duault</a> et Ethan</span>
             </div>
         </div>
     </footer>
