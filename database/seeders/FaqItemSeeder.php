@@ -13,7 +13,7 @@ class FaqItemSeeder extends Seeder
     public function run(): void
     {
         FaqItem::factory()
-            ->count(5)
+            ->count(10)
             ->create();
     }
 }

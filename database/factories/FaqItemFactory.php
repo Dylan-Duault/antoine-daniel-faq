@@ -23,8 +23,8 @@ class FaqItemFactory extends Factory
     public function definition(): array
     {
         return [
-            'question' => fake()->word(),
-            'answer' => fake()->word(),
+            'question' => fake()->sentence(),
+            'answer' => fake()->sentence(),
         ];
     }
 }
