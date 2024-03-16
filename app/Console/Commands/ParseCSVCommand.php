@@ -49,7 +49,6 @@ class ParseCSVCommand extends Command
         }
 
         $this->info('FAQ CSV file parsed successfully.');
-        $this->printArray($dataArray);
 
         // Import the data into the DB using the FaqItem model
         FaqItem::insert($dataArray);
