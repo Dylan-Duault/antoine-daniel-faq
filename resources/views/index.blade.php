@@ -74,9 +74,9 @@
                 <div class="column is-9">
                     @foreach($faqItems as $faqItem)   
                         <!-- Category card -->
-                        <div class="flex-card category-card light-bordered">
+                        <div id="{{\Illuminate\Support\Str::of($faqItem->question)->slug('-')}}" class="flex-card category-card light-bordered">
                             <div class="card-body">
-                                <a href="#">
+                                <a href="#{{\Illuminate\Support\Str::of($faqItem->question)->slug('-')}}">
                                     <!-- Content -->
                                     <div class="inner-content">
                                         <h2 class="title is-4">{{$faqItem->question}}</h2>
